@@ -1,35 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Starters from './starters.astro';
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to The Cook Book.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1 class="headerText">Welcome to <span class="text-gradient">The Cook Book</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			Welcome to my new playground! :) Wsadz dupe w dupe!;
+			<a><p>Read more <a href="/posts/1/">about</a> 1</p></a>
+
 		</p>
+		<a><p>Read more <a href="/post1/">about</a> post1</p></a>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+
+				href="/starters/"
+				image="/images/starters.png"
+				title="Starters"
+				body="Go to my first made from scratch page in this project"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="/soups/"
+				image="/images/soups.png"
+				title="Soups"
+				body="Go to my first made from scratch page in this project"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
+				href="/mainCourses/"
+				image="/images/mains.png"
+				title="Mains"
 				body="Explore a galaxy of community-built starter themes."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="/desserts/"
+				image="/images/desserts.png"
+				title="Desserts"
+				body="Come say Flamiso Flamiso Flamiso"
 			/>
 		</ul>
 	</main>
@@ -77,5 +86,9 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+
+	.headerText {
+		text-align: center;
 	}
 </style>

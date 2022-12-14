@@ -1,15 +1,24 @@
 ---
+import starters from '../images/starters.png';
+import soups from '../images/soups.png';
+import mains from '../images/mains.png';
+import desserts from '../images/desserts.png';
+
+
 export interface Props {
 	title: string;
+	image: string;
 	body: string;
 	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, image, title, body } = Astro.props;
 ---
 
 <li class="link-card">
+
 	<a href={href}>
+		<img class="cardPhoto" src={image}/>
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -58,5 +67,11 @@ const { href, title, body } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
+	}
+
+	.cardPhoto {
+		margin: auto;
+		width: 70px;
+		height: 110px;
 	}
 </style>
