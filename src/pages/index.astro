@@ -1,22 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Starters from './starters.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Starters from "./starters.astro";
 ---
 
 <Layout title="Welcome to The Cook Book.">
 	<main>
-		<h1 class="headerText">Welcome to <span class="text-gradient">The Cook Book</span></h1>
+		<header>
+		<h1 class="headerText">
+			Welcome to <span class="text-gradient">The Cook Book</span>
+		</h1>
 		<p class="instructions">
-			Welcome to my new playground! :) Wsadz dupe w dupe!;
-			<a><p>Read more <a href="/posts/1/">about</a> 1</p></a>
-
+			Welcome to The Cook Book. Best recipes honed by generation(s).
 		</p>
-		<a><p>Read more <a href="/post1/">about</a> post1</p></a>
+	</header>
 		<ul role="list" class="link-card-grid">
 			<Card
-
 				href="/starters/"
 				image="/images/starters.png"
 				title="Starters"
